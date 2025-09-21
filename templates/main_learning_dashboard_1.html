@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>Remote Classroom Dashboard</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-auto min-h-screen w-full flex-col justify-between">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark border-b border-black/10 dark:border-white/10 sticky top-0 z-10">
+<button class="text-black dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-bold text-black dark:text-white">Dashboard</h1>
+<div class="w-8"></div>
+</header>
+<main class="p-4 space-y-6">
+<section>
+<h2 class="text-xl font-bold text-black dark:text-white mb-4">My Courses</h2>
+<div class="flex overflow-x-auto gap-4 pb-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+<div class="flex-none w-40 space-y-2">
+<a href="{{ url_for('course_details', course_name='mathematics-101') }}" class="block">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALt_PcL1UElaef_9_y4l7iRpW2RHVgi1WuXTbzNSGLhV0EErDQPtCxoZ6O9pK5AcJ46-RG7iv5CQJ7oEC1y6dcPk0lllma8wZkoeiJZ_qqeLZ1CI-594SCR9IFHSKFo5EGIMUHNzSTMwefHKMOFrAb-vu10cSZfpIhpjwHUH3nSX6Jbja8dCc4dViTrjzs_pWt2M37m1dFJdwm4-PShT9-BiodSJG4N28tY1BBu5IwQ5xg4cgVi50HZwmTb12uD5AsLZrHaqTy884");'></div>
+<p class="text-base font-medium text-black dark:text-white">Mathematics 101</p>
+</a>
+</div>
+<div class="flex-none w-40 space-y-2">
+<a href="{{ url_for('course_details', course_name='science-fundamentals') }}" class="block">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAmdLdv9Swi_kE2gvRBBMJGoht48mnV73s0VR4QDYGBhUqWLOyqqV80WDqQOaROu9gIRMHvY-olK5h51H8TtonMP3hwhTwzb2wpcJhueQlKKVjiI8u7UOme7jP5Lk7xE-ov4kJRZSdtxVKj_ERM5xel_9WrP76VLhBRqIiaEusYifo6OPegh8mr0xQ4VOISwLvQoNUG07Hivm2m9bS9fj1FuMofPLczWCGqfKgi5Un6rVlY2_IW9s9l32Jnjq6k0Q4XJJagfKO1VDM");'></div>
+<p class="text-base font-medium text-black dark:text-white">Science Fundamentals</p>
+</a>
+</div>
+<div class="flex-none w-40 space-y-2">
+<a href="{{ url_for('course_details', course_name='world-history') }}" class="block">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center cursor-pointer hover:opacity-90 transition-opacity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoB_YQKKvLnfwldyT2xKkoZlVQHmUnqin6d0WapX5NJtyi7XKCtIfVZZdvpmLjkV8OJ5_swA-vaIRyUggikqBseePtJ0TOZt72PgQ9Xje1-BQE65SiROgHE10GrBE4xQcfSVKuURAVd1zADBFnW26_HUh_O3JvusahQuR_ZpLVGmGEfV85k44LKCKBBHc6LYV8rQ_a3tGpgOWvkSr3OXzMfUm33ecNEwQMo-rxGgZj2tH2aS6gm6vwN7Tw9EbczVjTUKK35vtMX3E");'></div>
+<p class="text-base font-medium text-black dark:text-white">World History</p>
+</a>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-black dark:text-white mb-4">Upcoming Lessons</h2>
+<div class="space-y-3">
+<a href="{{ url_for('lesson_player', lesson_name='algebra-basics') }}" class="block">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">smart_display</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-black dark:text-white">Lesson 3: Algebra Basics</p>
+<p class="text-sm text-black/60 dark:text-white/60">Mathematics 101</p>
+</div>
+</div>
+</a>
+<a href="{{ url_for('lesson_player', lesson_name='physics-intro') }}" class="block">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">smart_display</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-black dark:text-white">Lesson 2: Physics Intro</p>
+<p class="text-sm text-black/60 dark:text-white/60">Science Fundamentals</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+<section>
+<h2 class="text-xl font-bold text-black dark:text-white mb-4">Offline Content</h2>
+<div class="space-y-3">
+<a href="{{ url_for('offline_content') }}" class="block">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">download</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-black dark:text-white">Lesson 1: Number Systems</p>
+<p class="text-sm text-black/60 dark:text-white/60">Mathematics 101</p>
+</div>
+</div>
+</a>
+<a href="{{ url_for('offline_content') }}" class="block">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer transition-colors">
+<div class="flex items-center justify-center size-12 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">download</span>
+</div>
+<div class="flex-grow">
+<p class="font-semibold text-black dark:text-white">Lesson 1: Chemistry Basics</p>
+<p class="text-sm text-black/60 dark:text-white/60">Science Fundamentals</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-black/10 dark:border-white/10 py-2 px-4">
+<nav class="flex justify-around">
+<a class="flex flex-col items-center gap-1 text-primary" href="{{ url_for('dashboard') }}">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black/60 dark:text-white/60" href="{{ url_for('course_details', course_name='mathematics-101') }}">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs font-medium">Courses</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-black/60 dark:text-white/60" href="{{ url_for('settings') }}">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

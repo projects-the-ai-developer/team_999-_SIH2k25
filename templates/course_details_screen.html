@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<title>Course Details</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex h-screen flex-col">
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 p-4 backdrop-blur-sm">
+<a href="{{ url_for('dashboard') }}" class="flex items-center justify-center rounded-full p-2 hover:bg-gray-200/50 dark:hover:bg-gray-700/50">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-300">arrow_back</span>
+</a>
+<h1 class="flex-1 text-center text-lg font-bold text-gray-900 dark:text-white">Introduction to Physics</h1>
+<div class="w-8"></div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="p-6">
+<div class="flex flex-col items-center gap-4 text-center">
+<img alt="Course image for Introduction to Physics" class="h-32 w-32 rounded-lg object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXfzDTksQnBHQ9s_nDrR0w_lDifCxYKbbbLyre3vd2GyAqa6ggsPSI4GsM3sYvGTJ_y1sMLk_-7hh4BgUWdDmJMiAKTmZ7ZShJ0c-htMMNAxaFg9Fd8KBp1k6Lz282eT_bouSMXKPCnCJ8Y1XCIeNf1g2_vOQMA0nHCaMbivDtiT7ZoAhxYYqiA7MNXxNDU9vD6cwpGWuHvvUTMbduPddCfF7MJKvf6CDkIq4Ao7MFb9qp5BKh8Rj006IqjPXL4ykb5xuUHbr37PY"/>
+<div>
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Introduction to Physics</h2>
+<p class="text-base text-gray-600 dark:text-gray-400">Dr. Anya Sharma</p>
+<p class="text-sm text-gray-500 dark:text-gray-500">12 Lessons · 4.8★ · 1200 students</p>
+</div>
+</div>
+</div>
+<div class="px-6 py-4">
+<div class="mb-2 flex items-center justify-between">
+<h3 class="text-base font-medium text-gray-800 dark:text-gray-200">Course Progress</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">3/10 lessons</p>
+</div>
+<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-gray-700">
+<div class="h-2 rounded-full bg-primary" style="width: 30%;"></div>
+</div>
+</div>
+<div class="px-6 py-4">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Lessons</h3>
+<div class="space-y-2">
+<a href="{{ url_for('lesson_player', lesson_name='introduction-physics') }}" class="flex cursor-pointer items-center gap-4 rounded-lg bg-white/50 dark:bg-gray-800/20 p-3 hover:bg-primary/10 dark:hover:bg-primary/20 block no-underline">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-gray-900 dark:text-white">Lesson 1: Introduction to Physics</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">12:34</p>
+</div>
+<button class="rounded-full p-2 text-gray-500 hover:bg-primary/20 hover:text-primary dark:text-gray-400">
+<span class="material-symbols-outlined">download</span>
+</button>
+</a>
+<a href="{{ url_for('lesson_player', lesson_name='kinematics') }}" class="flex cursor-pointer items-center gap-4 rounded-lg bg-white/50 dark:bg-gray-800/20 p-3 hover:bg-primary/10 dark:hover:bg-primary/20 block no-underline">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-gray-900 dark:text-white">Lesson 2: Kinematics</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">15:02</p>
+</div>
+<button class="rounded-full p-2 text-green-500">
+<span class="material-symbols-outlined">check_circle</span>
+</button>
+</a>
+<a href="{{ url_for('lesson_player', lesson_name='newtons-laws') }}" class="flex cursor-pointer items-center gap-4 rounded-lg bg-white/50 dark:bg-gray-800/20 p-3 hover:bg-primary/10 dark:hover:bg-primary/20 block no-underline">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-gray-900 dark:text-white">Lesson 3: Newton's Laws</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">21:15</p>
+</div>
+<button class="rounded-full p-2 text-gray-500 hover:bg-primary/20 hover:text-primary dark:text-gray-400">
+<span class="material-symbols-outlined">download</span>
+</button>
+</a>
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-gray-100 dark:bg-gray-800/50 p-3 opacity-60">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-gray-700 dark:text-gray-300">Lesson 4: Work and Energy</p>
+<p class="text-sm text-gray-500 dark:text-gray-500">Locked</p>
+</div>
+<button class="rounded-full p-2 text-gray-400 dark:text-gray-600" disabled="">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="flex cursor-pointer items-center gap-4 rounded-lg bg-gray-100 dark:bg-gray-800/50 p-3 opacity-60">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-300 text-gray-500 dark:bg-gray-700 dark:text-gray-400">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-gray-700 dark:text-gray-300">Lesson 5: Momentum and Collisions</p>
+<p class="text-sm text-gray-500 dark:text-gray-500">Locked</p>
+</div>
+<button class="rounded-full p-2 text-gray-400 dark:text-gray-600" disabled="">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 border-t border-gray-200/50 bg-background-light/80 dark:border-gray-700/50 dark:bg-background-dark/80 backdrop-blur-sm">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="{{ url_for('dashboard') }}">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 rounded-lg p-2 text-primary" href="{{ url_for('course_details', course_name='physics') }}">
+<span class="material-symbols-outlined">school</span>
+<span class="text-xs font-medium">Courses</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="{{ url_for('ai_chat') }}">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="text-xs font-medium">AI Tutor</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400" href="{{ url_for('settings') }}">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

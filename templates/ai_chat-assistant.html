@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          },
+        },
+      }
+    </script>
+<title>AI Assistant</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col h-screen justify-between">
+<header class="bg-background-light dark:bg-background-dark shadow-sm">
+<div class="p-4 flex items-center">
+<button class="text-gray-800 dark:text-white p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 12H5"></path>
+<path d="M12 19l-7-7 7-7"></path>
+</svg>
+</button>
+<h1 class="text-lg font-bold text-gray-900 dark:text-white flex-1 text-center pr-10">AI Assistant</h1>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto p-4 space-y-6">
+<div class="text-center px-4 py-2">
+<p class="text-sm text-gray-600 dark:text-gray-400">Ask me anything about your courses. I'm here to help you understand better.</p>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-center bg-no-repeat bg-cover shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD2eLEqS0Z2bM4r1c6POJqlHQoRnJ3DziWLKwlnPGsD8NtOrLGdq6nJNHbu97jt6D1qr-xb_0JbvrGZnQ6P0DSxLEP3mjLh8FYT_CzJUK_fHI8YaXXBHINVnKzsCT0JK930LrtjGOHYy36VvtgshogxEF2ahcikMqjOZD-vSvyGc-JKbXCpjae-D6R6GgCJxlXm1-nwB1Bb8vR13Kg-ruyxgLQKWdZZiBUhb6iik-rh9oim0k1ASqKNYLSq8V_RTaPuMXNR7Zxb8ZY");'></div>
+<div class="flex flex-col gap-2">
+<p class="text-xs text-gray-500 dark:text-gray-400">AI Assistant</p>
+<div class="bg-primary/10 dark:bg-primary/20 text-gray-800 dark:text-gray-200 p-3 rounded-lg max-w-xs">
+<p>Hello! How can I assist you today?</p>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 justify-end">
+<div class="flex flex-col gap-2 items-end">
+<p class="text-xs text-gray-500 dark:text-gray-400">You</p>
+<div class="bg-primary text-white p-3 rounded-lg max-w-xs">
+<p>Can you explain the concept of photosynthesis in simple terms?</p>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg shrink-0">
+<span>U</span>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark p-4 border-t border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-3">
+<div class="relative flex-1">
+<input class="w-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white border-transparent focus:border-primary focus:ring-primary rounded-full py-3 pl-4 pr-12 text-sm" placeholder="Ask a question..." type="text"/>
+<button class="absolute inset-y-0 right-0 flex items-center pr-4 text-gray-500 dark:text-gray-400 hover:text-primary">
+<span class="material-symbols-outlined">
+                mic
+              </span>
+</button>
+</div>
+<button class="bg-primary text-white p-3 rounded-full hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark">
+<svg class="h-6 w-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12h14"></path>
+<path d="m12 5 7 7-7 7"></path>
+</svg>
+</button>
+</div>
+</footer>
+</div>
+
+</body></html>

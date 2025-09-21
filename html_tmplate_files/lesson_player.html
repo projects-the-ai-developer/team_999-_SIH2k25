@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4 pb-2">
+<button class="text-gray-800 dark:text-white">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold text-gray-900 dark:text-white tracking-tight pr-8">Lesson 1: Intro to Biology</h1>
+</header>
+<main class="px-4 py-3 space-y-6">
+<section class="bg-white dark:bg-background-dark rounded-xl shadow-sm p-4">
+<div class="flex items-center gap-4">
+<div class="flex-shrink-0">
+<img alt="Dr. Anya Sharma" class="size-14 rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW1I-DPWY9DsZPZ5pzmmmeH0CN9RbkIO93wrBvHDlkeTrmibSbjX-ToB9UCsBmjMpQAbrzxRhvLoJN13p9cgrXNWOoN-uhs7cTC49jyhjBgGfkxDB-vWS2ii69m9KPvvlbqfatCwYRjzSwiHVXbYMq2VC0MwoTWtjAAZrJ-x8BsQRd6jNno3IDc81a8snRNQHJO5e4f7ggaBfJ1gVaG3Kvm6ITsqHWLRzzBN8Q0_H1qdu3vUHuAqLg8bMjkeA5r7YzdpXEzoCsHw8"/>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-base font-bold text-gray-900 dark:text-white truncate">Cell Structure and Function</p>
+<p class="text-sm text-gray-500 dark:text-gray-400 truncate">Dr. Anya Sharma</p>
+</div>
+<button class="flex-shrink-0 size-12 flex items-center justify-center rounded-full bg-primary text-white">
+<span class="material-symbols-outlined text-3xl">play_arrow</span>
+</button>
+</div>
+</section>
+<div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white px-4 pb-2">Transcript</h2>
+<p class="text-gray-700 dark:text-gray-300 text-base leading-relaxed px-4">
+                        Welcome to the fascinating world of biology! In this introductory lesson, we'll explore the fundamental building blocks of life: cells. We'll delve into their intricate structures, including the nucleus, cytoplasm, and cell membrane, and discuss how these components work together to carry out essential life processes. We'll also touch upon the different types of cells and their specialized functions within organisms.
+                    </p>
+</div>
+<div>
+<h2 class="text-xl font-bold text-gray-900 dark:text-white px-4 pb-2">AI Assistant</h2>
+<div class="px-4">
+<div class="relative">
+<input class="form-input w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary h-14 pl-4 pr-12" placeholder="Ask a question about the lesson" type="text"/>
+<button class="absolute inset-y-0 right-0 flex items-center justify-center px-4 text-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 pb-safe-area-inset-bottom">
+<div class="px-4 pb-3 pt-2">
+<div class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">play_circle</span>
+<span class="text-xs font-medium">Lessons</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs font-medium">Chat</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
