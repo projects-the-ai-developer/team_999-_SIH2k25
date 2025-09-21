@@ -1,5 +1,4 @@
 # Stitch Learning Dashboard - Flask Backend
-ft.theaidev edition
 🔥 **Team 999+ Learning Dashboard with Flask Backend** 🔥
 
 ## Overview
